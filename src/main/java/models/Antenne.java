@@ -2,45 +2,46 @@ package models;
 
 public class Antenne {
 
-    public Double frequence;
+    public double frequence;
+    public Coordonnee position;
+    public double puissance;
+    public double gain;
 
-    public Double puissance;
+    public Coordonnee getPosition() {
+        return position;
+    }
 
-    public Double gain;
+    public void setPosition(Coordonnee position) {
+        this.position = position;
+    }
 
-    public Coordonnee coordonnee;
 
-    public Double getFrequence() {
+
+
+    public double getFrequence() {
         return frequence;
     }
 
-    public void setFrequence(Double frequence) {
+    public void setFrequence(double frequence) {
         this.frequence = frequence;
     }
 
-    public Double getPuissance() {
+    public double getPuissance() {
         return puissance;
     }
 
-    public void setPuissance(Double puissance) {
+    public void setPuissance(double puissance) {
         this.puissance = puissance;
     }
 
-    public Double getGain() {
+    public double getGain() {
         return gain;
     }
 
-    public void setGain(Double gain) {
+    public void setGain(double gain) {
         this.gain = gain;
     }
 
-    public Coordonnee getCoordonnee() {
-        return coordonnee;
-    }
-
-    public void setCoordonnee(Coordonnee coordonnee) {
-        this.coordonnee = coordonnee;
-    }
 
     public Antenne(Double frequence, Double puissance, Double gain) {
         this.frequence = frequence;

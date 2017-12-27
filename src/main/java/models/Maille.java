@@ -1,26 +1,35 @@
 package models;
 
+import java.util.List;
 import java.util.Map;
 
-public class Maille {
+public class Maille extends Territoire{
 
-    public Position position;
 
-    public Map<Antenne, Coordonnee> antenneCoordonneeMap;
+    public List<Antenne> antennes;
 
-    public Position getPosition() {
-        return position;
+    public Maille(List<Coordonnee> coordonnees, String nom) {
+        super(coordonnees, nom);
     }
 
-    public void setPosition(Position position) {
-        this.position = position;
+    public Maille(String cheminFichierGeoJSON, String nom) {
+        super(cheminFichierGeoJSON, nom);
     }
 
-    public Map<Antenne, Coordonnee> getAntenneCoordonneeMap() {
-        return antenneCoordonneeMap;
+
+    public List<Antenne> getAntennes() {
+        return antennes;
     }
 
-    public void setAntenneCoordonneeMap(Map<Antenne, Coordonnee> antenneCoordonneeMap) {
-        this.antenneCoordonneeMap = antenneCoordonneeMap;
+    public void setAntennes(List<Antenne> antennes) {
+        this.antennes = antennes;
+    }
+    public void ajouterAntenne(Antenne antenne)
+    {
+        antennes.add(antenne);
+    }
+    public void supprimerAntenne(Antenne antenne)
+    {
+        antennes.remove(antenne);
     }
 }

@@ -2,18 +2,20 @@ package models;
 
 import java.util.List;
 
-public class Territoire {
+public class Territoire extends Forme{
 
-    public Position position;
+    private  String nom;
 
-    public List<Maille> mailleList;
+    private List<Maille> mailleList;
 
-    public Position getPosition() {
-        return position;
+    public Territoire(List<Coordonnee> coordonnees,String nom) {
+        super(coordonnees);
+        this.nom=nom;
     }
 
-    public void setPosition(Position position) {
-        this.position = position;
+    public Territoire(String cheminFichierGeoJSON,String nom) {
+        super(cheminFichierGeoJSON);
+        this.nom=nom;
     }
 
     public List<Maille> getMailleList() {
