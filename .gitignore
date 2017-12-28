@@ -5,7 +5,9 @@ out/
 *.iml
 *.ipr
 *.iwr
-
+lib
+*.geojson
+Main.java
 # Ignore Gradle GUI config
 gradle-app.setting
 

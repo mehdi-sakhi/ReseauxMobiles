@@ -2,11 +2,11 @@ package models;
 
 public class Coordonnee {
 
-    public Double x;
+    private double x;
 
-    public Double y;
+    private double y;
 
-    public Double getX() {
+    public double getX() {
         return x;
     }
 
@@ -14,17 +14,18 @@ public class Coordonnee {
         this.x = x;
     }
 
-    public Double getY() {
+    public double getY() {
         return y;
     }
 
-    public void setY(Double y) {
+    public void setY(double y) {
         this.y = y;
     }
 
 
-    public Coordonnee(Double x, Double y) {
+    public Coordonnee(double x, double y) {
         this.x = x;
         this.y = y;
     }
+
 }
